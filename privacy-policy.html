@@ -25,65 +25,57 @@
 <body>
   <h1>DiscoveryMap プライバシーポリシー</h1>
 
-  <p>BlueTone Studio（以下「当方」といいます）は、Android アプリ「DiscoveryMap」（以下「本アプリ」といいます）における利用者の情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
+  <p>このページは、アプリ「DiscoveryMap」（作っているのは BlueTone Studio です）が、あなたのどんな情報を、なんのために使うのかを説明するものです。できるだけわかりやすい言葉で書いています。</p>
 
-  <h2>1. 収集する情報と利用目的</h2>
-
-  <h3>1-1. アカウント情報</h3>
-  <p>Google アカウントでログインした場合、Google Sign-In および Firebase Authentication を通じて以下の情報を取得・保持します。</p>
+  <h2>1. 集める情報と、その理由</h2>
   <table>
-    <tr><th>情報</th><th>利用目的</th></tr>
-    <tr><td>氏名（表示名）</td><td>アプリ内でのプロフィール表示</td></tr>
-    <tr><td>メールアドレス</td><td>アカウントの識別・管理</td></tr>
-    <tr><td>プロフィール画像の URL</td><td>アプリ内でのプロフィール表示</td></tr>
-    <tr><td>ユーザー ID（Firebase が発行する識別子）</td><td>ログイン状態の維持、投稿データとの紐付け</td></tr>
+    <tr><th>集めるもの</th><th>なんのため？</th></tr>
+    <tr><td>Google でログインしたときの名前・メールアドレス・プロフィール画像・ユーザー ID</td><td>あなたのアカウントを見分けて、アプリに名前やアイコンを表示するため</td></tr>
+    <tr><td>あなたが投稿した価格情報（商品名・価格・メモ・お店の番号）</td><td>みんなで価格を記録して見られるようにする、このアプリの機能のため</td></tr>
+    <tr><td>いま地図に表示している範囲（おおよその場所）</td><td>その場所のお店の情報を地図に表示するため</td></tr>
+    <tr><td>バーコードの番号</td><td>商品を見分けるため</td></tr>
+    <tr><td>端末を見分けるための番号（Firebase インストール ID など）</td><td>アプリを動かすしくみ（Firebase）に必要なため。広告や分析には使いません</td></tr>
   </table>
-  <p>ゲストとして利用する場合、上記の情報は取得せず、匿名の識別子のみが発行されます。</p>
+  <ul>
+    <li>ゲストのまま使う場合、名前やメールアドレスは集めません。</li>
+    <li>GPS の正確な現在地は、私たちのサーバーに送りません。端末の中だけで使います。</li>
+    <li>バーコードを読むカメラの映像は端末の中だけで処理します。写真や動画を保存したり、どこかに送ったりしません。</li>
+    <li>位置情報やカメラの利用は、端末の設定からいつでも「許可しない」にできます。許可しなくてもアプリは使えます。</li>
+  </ul>
 
-  <h3>1-2. 利用者が投稿するコンテンツ</h3>
-  <p>利用者が本アプリで価格情報を登録した場合、商品名・価格・メモ・対象店舗の識別子（OpenStreetMap のノード ID）・投稿者のユーザー ID を Cloud Firestore に保存します。利用目的は、価格情報の記録・表示という本アプリの機能の提供です。</p>
-
-  <h3>1-3. 位置情報</h3>
-  <p>本アプリは、現在地の地図表示および現在地ボタンによる地図移動のために端末の位置情報を利用します。<strong>端末の位置情報（GPS 座標）そのものを当方のサーバーに送信・保存することはありません。</strong></p>
-  <p>なお、地図データの取得のため、表示中の地図範囲（緯度経度の範囲）が後述の地図関連サービスに送信されます。位置情報の利用は端末の設定からいつでも拒否でき、拒否した場合も既定の位置（東京）を中心に本アプリを利用できます。</p>
-
-  <h3>1-4. カメラ（バーコードスキャン）</h3>
-  <p>本アプリは、商品バーコードの読み取りのためにカメラを利用します。カメラの映像は<strong>端末内でのみ処理され、画像・映像が保存されたり当方のサーバーへ送信されたりすることはありません。</strong>読み取られたバーコードの値（商品識別番号）は、商品情報の一部として Cloud Firestore に保存されます。カメラの利用は端末の設定からいつでも拒否でき、拒否した場合も商品名の手入力で本アプリを利用できます。</p>
-
-  <h3>1-5. 自動的に取得される情報</h3>
-  <p>本アプリは Firebase を利用しており、その稼働に伴い Firebase インストール ID 等の識別子や IP アドレスが Google に送信されることがあります。当方が広告や行動分析の目的でこれらを利用することはありません。本アプリは広告 SDK およびアクセス解析ツール（Google Analytics 等）を使用していません。</p>
-
-  <h2>2. 第三者サービス</h2>
-  <p>本アプリは以下の第三者サービスを利用しています。各サービスにおける情報の取り扱いは、それぞれのプライバシーポリシーをご確認ください。</p>
+  <h2>2. あなたの情報をだれかに渡すの？</h2>
+  <p><strong>売りません。勝手に渡しません。</strong>（法律で求められた場合だけは例外です）</p>
+  <p>ただし、アプリを動かすために次のサービスを使っていて、そのしくみ上、データがこれらのサービスに送られます。</p>
   <table>
-    <tr><th>サービス</th><th>用途</th><th>ポリシー</th></tr>
-    <tr><td>Google Firebase（Authentication / Cloud Firestore）</td><td>認証・データ保存</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシー</a></td></tr>
-    <tr><td>Google Sign-In</td><td>Google アカウントによるログイン</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a></td></tr>
-    <tr><td>Overpass API（OpenStreetMap）</td><td>表示中の地図範囲の店舗情報の取得</td><td><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OSMF Privacy Policy</a></td></tr>
-    <tr><td>OpenFreeMap</td><td>地図タイルの配信</td><td><a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a></td></tr>
+    <tr><th>サービス</th><th>なにに使っている？</th><th>くわしい説明</th></tr>
+    <tr><td>Google Firebase（Authentication / Cloud Firestore）</td><td>ログインとデータの保管</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシー</a></td></tr>
+    <tr><td>Google Sign-In</td><td>Google アカウントでのログイン</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a></td></tr>
+    <tr><td>Overpass API（OpenStreetMap）</td><td>地図に表示するお店の情報の取得</td><td><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OSMF Privacy Policy</a></td></tr>
+    <tr><td>OpenFreeMap</td><td>地図の画像の配信</td><td><a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a></td></tr>
   </table>
+  <p>本アプリは現在、広告や行動分析のしくみ（広告 SDK・アクセス解析ツール）を使っていません。</p>
+  <!-- 広告（AdMob）導入時にこのコメントを外して、直前の段落を削除する:
+  <p>広告を表示するため、広告用の識別番号（広告 ID）を Google（AdMob）と共有します。名前やメールアドレスを広告のために渡すことはありません。くわしくは <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google のポリシー</a>をご覧ください。</p>
+  -->
 
-  <h2>3. 情報の第三者提供</h2>
-  <p>当方は、法令に基づく場合を除き、利用者の個人情報を本人の同意なく第三者に販売・提供しません。広告目的でのデータ共有は行いません。</p>
+  <h2>3. 消してほしいとき</h2>
+  <p>アカウントと、それにひもづくすべてのデータ（投稿した価格情報など）は、<a href="./account-deletion.html">アカウント削除のリクエスト</a>ページからいつでも削除を申請できます。</p>
 
-  <h2>4. データの保持期間と削除</h2>
-  <p>アカウント情報および投稿コンテンツは、アカウントが削除されるまで保持します。アカウントとそれに紐づくすべてのデータの削除は、<a href="./account-deletion.html">アカウント削除のリクエスト</a>ページの手順で申請できます。</p>
+  <h2>4. 安全への取り組み</h2>
+  <p>アプリとサーバーの通信はすべて暗号化（TLS）しています。データは Google Firebase の設備で保管され、Google の安全対策が適用されます。</p>
 
-  <h2>5. 安全管理措置</h2>
-  <p>本アプリとサーバー間の通信はすべて TLS により暗号化されています。データは Google Firebase のインフラ上で保管され、Google の安全管理措置が適用されます。</p>
+  <h2>5. お子様について</h2>
+  <p>本アプリは特定の年齢層に向けたものではなく、子どもから意図的に個人情報を集めることはありません。</p>
 
-  <h2>6. お子様のプライバシー</h2>
-  <p>本アプリは特定の年齢層を対象としたものではなく、児童から意図的に個人情報を収集することはありません。</p>
+  <h2>6. このポリシーが変わるとき</h2>
+  <p>機能の追加や法令の変更にあわせて、内容を見直すことがあります。大切な変更があるときは、このページでお知らせします。</p>
 
-  <h2>7. ポリシーの変更</h2>
-  <p>本ポリシーの内容は、法令の変更や機能の追加に応じて改定されることがあります。重要な変更がある場合は、本ページにて告知します。</p>
-
-  <h2>8. お問い合わせ</h2>
-  <p>本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。</p>
+  <h2>7. 連絡先</h2>
+  <p>わからないことや心配なことがあれば、こちらまでご連絡ください。</p>
   <p>BlueTone Studio<br>メール: <a href="mailto:bluetonestudio.info@gmail.com">bluetonestudio.info@gmail.com</a></p>
 
   <footer>
-    <p>制定日: 2026年7月25日<br>© BlueTone Studio</p>
+    <p>制定日: 2026年7月25日<br>改定日: 2026年7月28日<br>© BlueTone Studio</p>
   </footer>
 </body>
 </html>
