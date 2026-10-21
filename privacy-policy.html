@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プライバシーポリシー | DiscoveryMap</title>
+  <title>プライバシーポリシー | 価格マップ</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -15,75 +15,173 @@
     }
     h1 { font-size: 1.6rem; border-bottom: 2px solid #3285f7; padding-bottom: 8px; }
     h2 { font-size: 1.2rem; margin-top: 2em; border-left: 4px solid #3285f7; padding-left: 8px; }
+    h3 { font-size: 1.05rem; margin-top: 1.5em; }
     table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; font-size: 0.95rem; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; font-size: 0.95rem; vertical-align: top; }
     th { background: #f0f4fa; }
+    .note { background: #fff8e1; border: 1px solid #f0d58c; padding: 8px 12px; }
     footer { margin-top: 3em; font-size: 0.85rem; color: #646464; }
     a { color: #3285f7; }
   </style>
 </head>
 <body>
-  <h1>DiscoveryMap プライバシーポリシー</h1>
+  <h1>価格マップ プライバシーポリシー</h1>
+  <p>BlueTone Studio（以下「当方」といいます）は、スマートフォンアプリ「価格マップ」（Android 版・iOS 版。旧称「DiscoveryMap」。以下「本アプリ」といいます）および本アプリの紹介 Web サイト（以下「本サイト」といいます）における利用者の情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます）を定めます。</p>
+  <p>本アプリの機能は、アプリのバージョン・端末・OS によって一部提供されないことがあります。本ポリシーは、利用者が使った機能について適用されます。</p>
 
-  <p>BlueTone Studio（以下「当方」といいます）は、Android アプリ「DiscoveryMap」（以下「本アプリ」といいます）における利用者の情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
-
-  <h2>1. 収集する情報と利用目的</h2>
+  <h2>1. 取得する情報と利用目的</h2>
 
   <h3>1-1. アカウント情報</h3>
-  <p>Google アカウントでログインした場合、Google Sign-In および Firebase Authentication を通じて以下の情報を取得・保持します。</p>
   <table>
-    <tr><th>情報</th><th>利用目的</th></tr>
-    <tr><td>氏名（表示名）</td><td>アプリ内でのプロフィール表示</td></tr>
-    <tr><td>メールアドレス</td><td>アカウントの識別・管理</td></tr>
-    <tr><td>プロフィール画像の URL</td><td>アプリ内でのプロフィール表示</td></tr>
-    <tr><td>ユーザー ID（Firebase が発行する識別子）</td><td>ログイン状態の維持、投稿データとの紐付け</td></tr>
+    <tr><th>情報</th><th>取得するとき</th><th>利用目的</th></tr>
+    <tr><td>ユーザー ID（Firebase Authentication が発行する識別子）</td><td>本アプリを初めて起動したとき（ゲストとして自動的に発行します）</td><td>ログイン状態の維持、登録した情報との紐付け</td></tr>
+    <tr><td>氏名（表示名）・メールアドレス・プロフィール画像の URL</td><td>Google アカウントでログインしたとき</td><td>アプリ内でのプロフィール表示、アカウントの識別・管理</td></tr>
+    <tr><td>メールアドレス・氏名</td><td>Apple でサインインしたとき（iOS 版のみ）。Apple の「メールを非公開」を選んだ場合は、Apple が発行する中継用のメールアドレスになります</td><td>アカウントの識別・管理</td></tr>
   </table>
-  <p>ゲストとして利用する場合、上記の情報は取得せず、匿名の識別子のみが発行されます。</p>
+  <p>本アプリは、初回の起動時にゲストとして利用を始めます。ゲストの間は氏名・メールアドレスを取得しませんが、価格情報の登録や棚札写真の送信など、以下に記載する情報は取得します。ゲストから Google アカウントまたは Apple でログインした場合、ゲストの間に登録した価格情報と商品の表示名をログイン後のアカウントに引き継ぎます。棚札写真とその読み取り結果は引き継がず、ゲストのユーザー ID のまま残ります。すでに使っていた Google アカウントや Apple ID に切り替えた場合などは、価格情報と表示名も引き継げないことがあります（利用規約 第 4 条）。引き継ぎのため、ゲストのユーザー ID とログイン後のユーザー ID の対応を一時的に保存します。</p>
+  <p>Google アカウントのプロフィール画像は、設定画面で表示する際に画像の配信元（Google など）から直接読み込みます。</p>
 
-  <h3>1-2. 利用者が投稿するコンテンツ</h3>
-  <p>利用者が本アプリで価格情報を登録した場合、商品名・価格・メモ・対象店舗の識別子（OpenStreetMap のノード ID）・投稿者のユーザー ID を Cloud Firestore に保存します。利用目的は、価格情報の記録・表示という本アプリの機能の提供です。</p>
-
-  <h3>1-3. 位置情報</h3>
-  <p>本アプリは、現在地の地図表示および現在地ボタンによる地図移動のために端末の位置情報を利用します。<strong>端末の位置情報（GPS 座標）そのものを当方のサーバーに送信・保存することはありません。</strong></p>
-  <p>なお、地図データの取得のため、表示中の地図範囲（緯度経度の範囲）が後述の地図関連サービスに送信されます。位置情報の利用は端末の設定からいつでも拒否でき、拒否した場合も既定の位置（東京）を中心に本アプリを利用できます。</p>
-
-  <h3>1-4. カメラ（バーコードスキャン）</h3>
-  <p>本アプリは、商品バーコードの読み取りのためにカメラを利用します。カメラの映像は<strong>端末内でのみ処理され、画像・映像が保存されたり当方のサーバーへ送信されたりすることはありません。</strong>読み取られたバーコードの値（商品識別番号）は、商品情報の一部として Cloud Firestore に保存されます。カメラの利用は端末の設定からいつでも拒否でき、拒否した場合も商品名の手入力で本アプリを利用できます。</p>
-
-  <h3>1-5. 自動的に取得される情報</h3>
-  <p>本アプリは Firebase を利用しており、その稼働に伴い Firebase インストール ID 等の識別子や IP アドレスが Google に送信されることがあります。当方が広告や行動分析の目的でこれらを利用することはありません。本アプリは広告 SDK およびアクセス解析ツール（Google Analytics 等）を使用していません。</p>
-
-  <h2>2. 第三者サービス</h2>
-  <p>本アプリは以下の第三者サービスを利用しています。各サービスにおける情報の取り扱いは、それぞれのプライバシーポリシーをご確認ください。</p>
+  <h3>1-2. 利用者が登録する情報と公開範囲</h3>
   <table>
-    <tr><th>サービス</th><th>用途</th><th>ポリシー</th></tr>
-    <tr><td>Google Firebase（Authentication / Cloud Firestore）</td><td>認証・データ保存</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシー</a></td></tr>
-    <tr><td>Google Sign-In</td><td>Google アカウントによるログイン</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a></td></tr>
-    <tr><td>Overpass API（OpenStreetMap）</td><td>表示中の地図範囲の店舗情報の取得</td><td><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OSMF Privacy Policy</a></td></tr>
-    <tr><td>OpenFreeMap</td><td>地図タイルの配信</td><td><a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a></td></tr>
+    <tr><th>情報</th><th>内容</th><th>公開範囲</th></tr>
+    <tr><td>価格情報</td><td>商品、価格、メモ（任意）、店舗の識別子（OpenStreetMap の ID）、登録・更新日時、登録した利用者のユーザー ID</td><td><strong>公開</strong>（下記のとおり）</td></tr>
+    <tr><td>商品情報</td><td>商品名、バーコードの値（読み取った場合）、商品を最初に登録した利用者のユーザー ID、作成日時</td><td>本アプリの利用者に公開</td></tr>
+    <tr><td>商品の表示名（任意）</td><td>自分の画面だけに表示する商品名</td><td>本人のみ</td></tr>
+  </table>
+  <p>利用目的は、価格情報の記録・表示、地図上での価格情報の共有、商品の特定という本アプリの機能の提供です。</p>
+  <p>商品を名前で検索するとき、入力した文字は商品を探すために Cloud Firestore に送信します。検索した文字そのものを当方のサーバーに保存することはありません。</p>
+  <p class="note"><strong>価格情報は公開されます。</strong>価格情報は本アプリの他の利用者の地図や一覧に表示され、本アプリの利用者以外も技術的に取得できる状態で保存されます。公開されるデータには、商品・価格・店舗・登録日時のほか、登録した利用者のユーザー ID（氏名やメールアドレスではない識別子）とメモが含まれます。メモは本アプリの画面では登録した本人にしか表示しませんが、公開されるデータに含まれるため、氏名や連絡先など個人を特定できる内容は書かないでください。</p>
+
+  <h3>1-3. 棚札写真</h3>
+  <p>「棚の写真から一括登録」の機能で送信した写真（以下「棚札写真」といいます）は、次のとおり取り扱います。</p>
+  <ul>
+    <li>棚札写真は、縮小や加工をせず、撮影されたデータのまま Cloud Storage for Firebase に保存します。写真に撮影日時・撮影場所（GPS 座標）・端末の機種名などの付随情報（EXIF）が含まれている場合は、それらも併せて保存されます。</li>
+    <li>写真を送信すると、店舗の識別子・店舗名・送信日時・処理の状態などを Cloud Firestore に保存します。当方のサーバー（Cloud Functions）は、写真から撮影日時・撮影場所・端末の機種名と画像の大きさを取り出して、あわせて保存します。</li>
+    <li>当方のサーバーは、棚札に書かれた商品名・価格を読み取るため、写真を Google の Gemini API に送信します。送信する写真には、付随情報（EXIF）が含まれることがあります。読み取り結果は Cloud Firestore に保存します。</li>
+    <li>利用目的は、棚札の商品名・価格の読み取り、読み取り結果の確認画面での表示、読み取り精度の検証・改善と再解析、および撮影日時・撮影場所による登録内容の確認です（利用規約 第 9 条）。</li>
+    <li>棚札写真と読み取り結果は、本アプリでは送信した本人だけが閲覧できます。当方は上記の目的のために参照することがあります。</li>
+    <li>他の来店者や従業員などが写り込まないようにしてください（利用規約 第 9 条）。</li>
+  </ul>
+
+  <h3>1-4. 位置情報</h3>
+  <p>本アプリは、地図の中心の決定、現在地の表示、店舗までの距離の表示のために端末の位置情報を利用します。<strong>端末の位置情報（GPS 座標）そのものを当方のサーバーに送信・保存することはありません。</strong></p>
+  <ul>
+    <li>地図と店舗の情報を取得するため、表示中の地図の範囲（表示範囲より少し広い緯度経度の範囲）や店舗の識別子を、第 2 条の地図関連サービスに送信します。本アプリは起動時に現在地を中心に地図を表示するため、送信する範囲から利用者のおおよその位置が分かることがあります。</li>
+    <li>棚札写真に撮影場所（GPS 座標）が含まれている場合は、1-3 のとおり保存します。</li>
+    <li>位置情報の利用は端末の設定からいつでも拒否できます。拒否した場合も、既定の位置（東京）を中心に本アプリを利用できます。</li>
+  </ul>
+
+  <h3>1-5. カメラと写真</h3>
+  <ul>
+    <li>本アプリは、商品バーコードの読み取りと、棚札の文字・バーコードの読み取り（棚札ライブ）にカメラを利用します。これらのカメラの映像は端末内で処理し、映像を保存したり当方のサーバーへ送信したりすることはありません。送信するのは、読み取ったバーコードの値と、利用者が確認して登録した価格情報です。</li>
+    <li>棚札写真の撮影と、端末内の写真の選択にカメラと写真ライブラリを利用します。選んだ写真は 1-3 のとおり送信・保存します。</li>
+    <li>設定画面の評価用の機能（バーコード読み取りの比較）で選んだ写真は、端末内で処理し、送信しません。処理のための一時ファイルは処理の後に削除します。</li>
+    <li>Android 版の端末内での読み取りには Google の ML Kit を使います。ML Kit は、端末とアプリの情報や利用状況の統計を Google に送信することがあります。</li>
+    <li>カメラと写真ライブラリの利用は端末の設定からいつでも拒否できます。拒否した場合も、商品名と価格の手入力で本アプリを利用できます。</li>
+  </ul>
+
+  <h3>1-6. バーコードによる商品名の検索</h3>
+  <p>読み取ったバーコードの値が商品情報に無い場合、当方のサーバーがその値を Google の Gemini API（Google 検索による確認を含みます）に送信し、商品名を調べます。送信するのはバーコードの値だけで、ユーザー ID や位置情報は送信しません。調べた結果を採用しなかった場合やエラーの場合は、障害の調査のため、バーコードの値と商品名の候補を当方のサーバーの記録に残すことがあります（1-12 の記録と同じく 30 日間保存します）。</p>
+
+  <h3>1-7. 利用状況の分析（Google アナリティクス for Firebase）</h3>
+  <p>ストア（テスト配信を含みます）から配布する本アプリでは、Google が提供する Google アナリティクス for Firebase を使い、表示した画面と操作（ボタンを押したことなど）の記録を送信します。当方は、これらの記録をユーザー ID・氏名・メールアドレスと結びつけません。あわせて、Google アナリティクス for Firebase は、アプリのインスタンス ID、広告 ID（Android 版）、IP アドレスから推定されるおおよその地域、端末・OS の情報、初回起動やセッションなどの情報を自動的に取得することがあります（Google の開示によります）。</p>
+  <p>利用目的は、利用状況の把握と本アプリの改善です。</p>
+
+  <h3>1-8. 広告（Google AdMob）</h3>
+  <ul>
+    <li>本アプリは Google が提供する Google AdMob を組み込んでいます。現在は広告の表示を停止していますが、今後、本アプリ内に広告を表示することがあります（利用規約 第 13 条）。</li>
+    <li>Google AdMob の SDK は、広告を表示していない間も本アプリの起動時に初期化されます。SDK は、広告 ID（Android 版）・IP アドレス・端末の情報などを取得し、広告の配信・効果測定・不正の防止や、利用者の興味に応じた広告の表示に使うことがあります（Google の開示によります）。</li>
+    <li>Android 版では、端末の設定から広告 ID を削除・リセットできます。iOS 版はトラッキングの許可を求めないため、広告用の識別子（IDFA）は使用しません。</li>
+    <li>当方が、利用者の登録した情報（価格情報・棚札写真など）を広告主に提供することはありません。</li>
+  </ul>
+
+  <h3>1-9. お問い合わせ・報告</h3>
+  <p>設定画面の「お問合せ・報告」から開く Google フォームで、お問い合わせと報告を受け付けます。このフォームでは、メールアドレス（必須）、お問い合わせの種別と内容、対象の店舗名・商品名（任意）のほか、本アプリが自動で入力するアプリのバージョン、端末の機種名と OS のバージョンを取得します。メールでお問い合わせいただいた場合は、メールアドレスとお問い合わせの内容を取得します。</p>
+  <p>利用目的は、お問い合わせへの回答と確認のためのご連絡、ご本人の確認、不具合の調査、重複した報告や不正な報告への対策です。</p>
+
+  <h3>1-10. 価格の共有</h3>
+  <p>本アプリから価格を共有する場合、商品名・価格・店舗名と、商品と店舗の識別子を含むリンクを、利用者が選んだアプリに渡します。リンクにユーザー ID は含みません。リンクを開いた人が本アプリを入れていない場合は、本サイトが表示されます。</p>
+
+  <h3>1-11. 端末内に保存する情報</h3>
+  <p>本アプリは、地図の店舗情報と最後に取得した地図の範囲のキャッシュ（最大 7 日間）、商品検索の履歴（最大 10 件）とその履歴を使ったユーザー ID、ログイン状態などを端末内に保存します。これらの保存した内容を当方のサーバーに送信することはありません。本アプリを端末から削除すると、端末内の情報も削除されます。</p>
+
+  <h3>1-12. 通信に伴って送信される情報</h3>
+  <p>本アプリが Firebase の各サービスや当方のサーバーと通信する際、IP アドレス、端末とアプリの情報、Firebase のインストール ID などが Google に送信されます。当方のサーバー（Cloud Functions）へのアクセスの記録（IP アドレス、通信元のアプリの情報など）は、障害の調査のため 30 日間保存します。</p>
+
+  <h2>2. 外部に送信する情報と第三者サービス</h2>
+  <p>本アプリは、以下のサービスに情報を送信します。各サービスにおける情報の取り扱いは、それぞれのプライバシーポリシーをご確認ください。</p>
+  <table>
+    <tr><th>サービス（提供者）</th><th>送信する主な情報</th><th>目的</th><th>ポリシー</th></tr>
+    <tr><td>Firebase Authentication（Google LLC）</td><td>ユーザー ID、Google・Apple から受け取った氏名・メールアドレス・プロフィール画像の URL</td><td>認証</td><td rowspan="3"><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシー</a></td></tr>
+    <tr><td>Cloud Firestore・Cloud Storage for Firebase・Cloud Functions（Google LLC）</td><td>1-2・1-3 の情報、棚札写真、バーコードの値</td><td>データの保存・処理</td></tr>
+    <tr><td>Google アナリティクス for Firebase（Google LLC）</td><td>1-7 の情報</td><td>利用状況の分析</td></tr>
+    <tr><td>Google Sign-In（Google LLC）</td><td>Google アカウントでの認証に必要な情報</td><td>ログイン</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a></td></tr>
+    <tr><td>Sign in with Apple（Apple Inc.。iOS 版のみ）</td><td>Apple ID での認証に必要な情報</td><td>ログイン</td><td><a href="https://www.apple.com/jp/legal/privacy/" target="_blank" rel="noopener">Apple のプライバシーポリシー</a></td></tr>
+    <tr><td>Gemini API（Google LLC）</td><td>棚札写真（付随情報を含むことがあります）、バーコードの値</td><td>棚札の読み取り、商品名の検索</td><td><a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 追加利用規約</a></td></tr>
+    <tr><td>Google AdMob（Google LLC）</td><td>1-8 の情報</td><td>広告の配信</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google の広告に関するポリシー</a></td></tr>
+    <tr><td>ML Kit（Google LLC。Android 版のみ）</td><td>端末とアプリの情報、利用状況の統計</td><td>端末内でのバーコード・文字の読み取り</td><td><a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener">ML Kit のデータ開示</a></td></tr>
+    <tr><td>Overpass API（OpenStreetMap のデータを提供する公開サーバー）</td><td>表示中の地図の範囲、店舗の識別子、IP アドレス</td><td>店舗情報の取得</td><td><a href="https://wiki.openstreetmap.org/wiki/Overpass_API" target="_blank" rel="noopener">Overpass API</a></td></tr>
+    <tr><td>OpenFreeMap</td><td>表示中の地図タイルの位置、IP アドレス</td><td>地図の表示</td><td><a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a></td></tr>
+    <tr><td>Google フォーム（Google LLC）</td><td>1-9 の情報</td><td>お問い合わせ・報告の受付</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a></td></tr>
+    <tr><td>Cloudflare Pages（Cloudflare, Inc.）</td><td>共有リンクを開いたときのアクセスの情報</td><td>共有リンクの表示（本サイト）</td><td><a href="https://www.cloudflare.com/ja-jp/privacypolicy/" target="_blank" rel="noopener">Cloudflare のプライバシーポリシー</a></td></tr>
+    <tr><td>GitHub Pages（GitHub, Inc.）</td><td>本ポリシーや利用規約のページを開いたときのアクセスの情報</td><td>公開文書の表示</td><td><a href="https://docs.github.com/ja/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub のプライバシーに関する声明</a></td></tr>
+    <tr><td>Google アナリティクス（Google LLC。本サイトのみ）</td><td>第 9 条の情報</td><td>本サイトのアクセス解析</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a></td></tr>
   </table>
 
   <h2>3. 情報の第三者提供</h2>
-  <p>当方は、法令に基づく場合を除き、利用者の個人情報を本人の同意なく第三者に販売・提供しません。広告目的でのデータ共有は行いません。</p>
+  <ul>
+    <li>当方は、法令に基づく場合を除き、本人の同意なく利用者の個人情報を第三者に提供しません。第 2 条のサービスへの送信は、本アプリの機能を提供するために行うものです。</li>
+    <li>1-2 のとおり、価格情報は利用者が登録した時点で公開されます。</li>
+    <li>当方は、利用規約 第 16 条のとおり、価格・商品名・店舗に関する情報を個人を識別できない形に処理したうえで、統計データの作成などに利用し、その統計データを第三者に提供することがあります。</li>
+  </ul>
 
-  <h2>4. データの保持期間と削除</h2>
-  <p>アカウント情報および投稿コンテンツは、アカウントが削除されるまで保持します。アカウントとそれに紐づくすべてのデータの削除は、<a href="./account-deletion.html">アカウント削除のリクエスト</a>ページの手順で申請できます。</p>
+  <h2>4. 外国にある第三者による取り扱い</h2>
+  <p>Cloud Firestore・Cloud Storage for Firebase・Cloud Functions のデータは、日本（東京リージョン）に保存します。一方、Firebase Authentication、Google アナリティクス for Firebase、Google AdMob、Gemini API、ML Kit（いずれも米国の Google LLC）、Sign in with Apple（米国の Apple Inc.）、Overpass API と OpenFreeMap（国外の運営者）では、日本以外の国で情報が処理・保存されることがあります。これらの事業者は、それぞれのプライバシーポリシー等に基づいて情報を取り扱っています。外国の個人情報の保護に関する制度は、<a href="https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/#gaikoku" target="_blank" rel="noopener">個人情報保護委員会の公表資料</a>をご覧ください。</p>
 
-  <h2>5. 安全管理措置</h2>
-  <p>本アプリとサーバー間の通信はすべて TLS により暗号化されています。データは Google Firebase のインフラ上で保管され、Google の安全管理措置が適用されます。</p>
+  <h2>5. 保持期間と削除</h2>
+  <h3>5-1. 保持期間</h3>
+  <ul>
+    <li>アカウント情報は、アカウントが削除されるまで保持します。</li>
+    <li>価格情報・商品情報・商品の表示名は、期間を定めずに保持します。</li>
+    <li>棚札写真（付随情報を含みます）と読み取り結果は、1-3 の目的のため、期間を定めずに保持します。</li>
+    <li>お問い合わせの内容は、対応に必要な期間保持します。</li>
+  </ul>
+  <h3>5-2. アカウントの削除</h3>
+  <p>アカウントは、本アプリの設定画面（ログイン中の場合）から削除できます。アプリから削除できない場合は、<a href="./account-deletion.html">アカウント削除のページ</a>の手順で削除を申請できます。</p>
+  <table>
+    <tr><th>区分</th><th>対象</th></tr>
+    <tr><td>削除するもの</td><td>アカウント情報（氏名・メールアドレス・プロフィール画像の URL・ログインの情報）。ユーザー ID と氏名・メールアドレスとの対応も削除します。Google アカウントでログインしていた場合は本アプリへの Google アカウントの連携を、Apple でサインインしていた場合は Apple の認可を、それぞれ解除します。連携の解除に失敗した場合も、アカウントの削除は完了します。Google アカウントの設定画面から本アプリの連携を解除できます。</td></tr>
+    <tr><td>削除後も残るもの</td><td>登録した価格情報、商品情報、商品の表示名、棚札写真（付随情報を含みます）とその読み取り結果。これらには削除前のユーザー ID が残りますが、ユーザー ID から氏名やメールアドレスをたどることはできなくなります。価格情報は削除後も他の利用者に表示され、削除したアカウントからは編集・削除できなくなります。</td></tr>
+  </table>
+  <ul>
+    <li>削除したデータも、障害に備えたバックアップに最大 7 日間残り、その後消去されます。</li>
+    <li>ゲストのアカウントは、本アプリから削除できません。ゲストの間に登録した情報の削除を希望する場合は、第 11 条のお問い合わせ先にご連絡ください。</li>
+    <li>端末内の情報（1-11）は、アカウントを削除しても端末に残ります。本アプリを端末から削除すると消去されます。</li>
+  </ul>
 
-  <h2>6. お子様のプライバシー</h2>
-  <p>本アプリは特定の年齢層を対象としたものではなく、児童から意図的に個人情報を収集することはありません。</p>
+  <h2>6. 安全管理措置</h2>
+  <p>本アプリとサーバーとの通信は、すべて TLS で暗号化しています。データは Google Firebase の基盤上に保管し、本人だけが読み書きできる情報には、本人以外がアクセスできないようアクセス制御を設定しています。</p>
 
-  <h2>7. ポリシーの変更</h2>
-  <p>本ポリシーの内容は、法令の変更や機能の追加に応じて改定されることがあります。重要な変更がある場合は、本ページにて告知します。</p>
+  <h2>7. 開示などの請求</h2>
+  <p>利用者は、当方が保有する自己の個人情報について、利用目的の通知、開示、訂正・追加・削除、利用の停止・消去、第三者への提供の停止を求めることができます。第 11 条のお問い合わせ先までご連絡ください。ご本人であることを確認したうえで、法令に従って対応します。</p>
 
-  <h2>8. お問い合わせ</h2>
-  <p>本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。</p>
+  <h2>8. お子様のプライバシー</h2>
+  <p>本アプリは特定の年齢層を対象としたものではありません。未成年の方は、法定代理人の同意を得たうえで本アプリを利用してください（利用規約 第 5 条）。</p>
+
+  <h2>9. 本サイトのアクセス解析</h2>
+  <p>本サイトでは、利用状況を把握するために Google LLC が提供する Google アナリティクスを使用しています。Google アナリティクスは Cookie を用いて、閲覧したページ・参照元・閲覧に使用したブラウザや端末の種類・おおよその地域などの情報を収集します。<strong>これらの情報に氏名やメールアドレスなど個人を特定する情報は含まれません。</strong></p>
+  <p>収集された情報は Google のプライバシーポリシーに基づいて管理されます。Google がデータを収集・処理する仕組みは「<a href="https://www.google.com/policies/privacy/partners/" target="_blank" rel="noopener">Google のサービスを使用するサイトやアプリから収集した情報の Google による使用</a>」をご覧ください。Google アナリティクスによる情報の収集は、ブラウザの Cookie 設定、または <a href="https://tools.google.com/dlpage/gaoptout?hl=ja" target="_blank" rel="noopener">Google アナリティクス オプトアウト アドオン</a>で無効にできます。</p>
+  <p>本サイトにはお問い合わせフォーム等はなく、本サイト自体が氏名・メールアドレスなどの個人情報を収集することはありません。</p>
+
+  <h2>10. ポリシーの変更</h2>
+  <p>本ポリシーの内容は、法令の変更や機能の追加に応じて改定することがあります。改定した場合は、本ページにて告知します。</p>
+
+  <h2>11. お問い合わせ</h2>
+  <p>本ポリシーと個人情報の取り扱いに関するお問い合わせは、以下の連絡先、または本アプリの設定画面の「お問合せ・報告」までお願いします。</p>
   <p>BlueTone Studio<br>メール: <a href="mailto:bluetonestudio.info@gmail.com">bluetonestudio.info@gmail.com</a></p>
 
   <footer>
-    <p>制定日: 2026年7月25日<br>© BlueTone Studio</p>
+    <p>制定日: 2026年7月25日<br>改定日: 2026年10月22日（全面改定）<br>© BlueTone Studio</p>
   </footer>
 </body>
 </html>
