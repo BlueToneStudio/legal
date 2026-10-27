@@ -1,6 +1,6 @@
 # BlueTone Studio 公開文書
 
-DiscoveryMap のプライバシーポリシー等を GitHub Pages で公開するリポジトリ。
+価格マップ（旧称 DiscoveryMap）のプライバシーポリシー等を GitHub Pages で公開するリポジトリ。
 
 - https://bluetonestudio.github.io/legal/privacy-policy.html
 - https://bluetonestudio.github.io/legal/account-deletion.html
